@@ -1,0 +1,238 @@
+img {
+  pointer-events: none;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header ul {
+  list-style: none;
+}
+
+header .logo {
+  border-top: 6px solid #0D47A1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10rem;
+}
+
+header .logo .logo-img {
+  padding: 0 1.5rem;
+  height: 5rem;
+  width: 8rem;
+}
+
+header .logo .title {
+  font-family: "Open Sans", sans-serif;
+}
+
+header .logo .title h1 {
+  font-size: clamp(1.2rem, 2.1vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+header .logo .title h2 {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.navbar {
+  font-family: "Open Sans", sans-serif;
+  font-size: .965rem;
+  background-color: #1565C0;
+  font-weight: 400;
+}
+
+.navbar .dropdown-toggle::after {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #e6e0e0;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: white;
+}
+
+.nav-item {
+  padding: 0 2rem;
+}
+
+.collapse .navbar-nav.nav-item.dropdown-menu::before {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.dropdown-menu {
+  background-color: #1976D2;
+  -webkit-animation: slide .5s ease 1;
+          animation: slide .5s ease 1;
+}
+
+.fas {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-link[aria-expanded="true"] .fas {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.dropdown-item {
+  padding: .7rem;
+  font-size: .8rem;
+  color: #e6e0e0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.dropdown-item:hover {
+  color: white;
+  background-color: #42A5F5;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateY(-20%) scaleY(0.8);
+            transform: translateY(-20%) scaleY(0.8);
+    opacity: .8;
+  }
+  100% {
+    -webkit-transform: translateY(0%) scaleY(1);
+            transform: translateY(0%) scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateY(-20%) scaleY(0.8);
+            transform: translateY(-20%) scaleY(0.8);
+    opacity: .8;
+  }
+  100% {
+    -webkit-transform: translateY(0%) scaleY(1);
+            transform: translateY(0%) scaleY(1);
+    opacity: 1;
+  }
+}
+
+.main-landing .overlay {
+  background-color: black;
+}
+
+.main-landing .main-box-size {
+  height: 80vh;
+  width: 100%;
+}
+
+.main-landing .main-box-size .img-size {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.7;
+}
+
+.main-landing .carousel-caption {
+  font-family: "Poppins", sans-serif;
+  bottom: 30%;
+  margin: auto;
+}
+
+.main-landing .carousel-caption h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 2px;
+  font-size: clamp(30px, 4vw, 50px);
+  text-shadow: -3px 6px 10px rgba(0, 0, 0, 0.6);
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+}
+
+.main-landing .carousel-caption p {
+  font-size: clamp(10px, 2.5vw, 15px);
+  text-shadow: 2px 8px 10px rgba(0, 0, 0, 0.53);
+  line-height: 1.7;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 300px;
+  }
+  .logo .logo-img {
+    height: 5rem;
+    width: 8rem;
+  }
+  .logo .title {
+    text-align: center;
+  }
+  .navbar-nav .nav-item .dropdown-item {
+    padding: 1.2rem 1rem;
+  }
+  .navbar-nav .nav-item .nav-link {
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo .logo-img {
+    display: none;
+  }
+  .logo .title {
+    text-align: left;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #a3a3a3;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #4e68da;
+}
+/*# sourceMappingURL=style.css.map */

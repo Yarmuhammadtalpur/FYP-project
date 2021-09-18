@@ -1,0 +1,11 @@
+@keyframes slide{
+    0% {
+        transform: translateY(-20%) scaleY(.8);
+        opacity: .8;
+    }
+
+    100% {
+        transform: translateY(0%) scaleY(1);
+        opacity: 1;
+    }
+}

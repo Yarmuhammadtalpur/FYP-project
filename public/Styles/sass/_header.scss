@@ -1,0 +1,115 @@
+
+img{
+    
+    pointer-events: none;
+}
+header{
+    
+    a{
+        text-decoration: none;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+
+
+    .logo{
+    border-top: 6px solid $blue-900;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 10rem;
+
+    .logo-img{
+        padding: 0 1.5rem;
+        height: 5rem;
+        width: 8rem;
+
+    }
+
+    .title{        
+        font-family: $nav-fonts;
+        h1{
+            font-size: clamp(1.2rem, 2.1vw ,1.6rem);
+            font-weight: 700;
+            letter-spacing: 0;   
+                     
+            
+            
+        }
+        h2{
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            font-weight: 600;
+            letter-spacing: 0;            
+            
+        }
+        
+    }
+    }
+
+
+}
+
+.navbar{
+    font-family: $nav-fonts;
+    font-size: .965rem;
+    background-color: $blue-800;    
+    font-weight: 400;
+
+    .dropdown-toggle::after{
+        transition: .3s;
+        
+    }
+ 
+}
+.navbar-nav .nav-item .nav-link{
+
+        color: $nav-font-color;
+        &:hover{
+        transition: .5s;
+        color: $color-white;
+        }
+}
+
+.nav-item{
+    padding: 0 2rem;
+}
+
+.collapse .navbar-nav.nav-item.dropdown-menu::before {
+     transition: .3s;
+ }
+
+.dropdown-menu{
+    background-color: $blue-700;    
+    animation: slide .5s ease 1;
+    
+}
+
+.fas{
+    transition: .3s;
+}
+
+.nav-link[aria-expanded="true"] {
+
+    .fas{
+        transform: rotate(90deg);
+    }
+
+    }
+
+
+.dropdown-item{
+    padding: .7rem;
+    font-size: .8rem;    
+    color: $nav-font-color;transition: .5s;
+
+    &:hover{
+        color: $color-white;
+        background-color: $blue-400;
+        
+
+    }
+}
+

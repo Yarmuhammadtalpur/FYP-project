@@ -1,0 +1,47 @@
+@media only screen and (max-width: 768px) {
+    .logo{
+        justify-content: center;
+        flex-direction: column;  
+        height: 300px;
+        .logo-img{    
+            height: 5rem;
+            width: 8rem;
+        }
+    
+        .title{
+            text-align: center;
+            
+        }
+    }
+
+
+    .navbar-nav .nav-item {
+        
+        .dropdown-item{
+            padding: 1.2rem 1rem;
+        }
+
+        .nav-link{
+            padding: 2rem 0;
+    
+        }
+    }
+    
+    
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .logo{
+        .logo-img{    
+            display: none;
+        }
+        
+        .title{
+            text-align: left;
+        }
+    }
+
+    
+}
