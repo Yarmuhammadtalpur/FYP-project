@@ -33,5 +33,10 @@ mongoose.connect(process.env.mongodb_URL, {
 
 
 app.get('/', (req, res) => {
-    res.render('home')
-})
+    res.render('home');
+});
+
+app.get('/home/dean_message', (req, res)=>{
+
+    res.render('dean_page');
+});

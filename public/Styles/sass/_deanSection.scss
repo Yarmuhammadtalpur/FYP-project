@@ -1,0 +1,53 @@
+
+
+
+.dean-section {
+    padding: 5rem 2.1rem;
+    font-family: $font-secondary; 
+
+    .align-item {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    h1{
+        font-family: $font-primary;
+    }
+    h3{
+        font-size: .8rem;
+        font-family: $font-primary;
+        color: $blue-900;
+    }
+    h4{
+        font-size: .65rem;
+        color: $gray-color;
+        font-family: $font-primary;
+    }
+    hr{
+        background-color: $blue-800;
+        height: 2px;
+        width: 220px;        
+        margin-bottom: 2rem;       
+    }
+    p{
+        text-align: justify;        
+        font-size: clamp(.9rem, .98vw, 1rem);
+        margin: .3rem
+        ;
+        
+    }
+    .fet_message{
+        margin-top: 1rem;
+    }
+
+    .btn{
+        background-color: $blue-900;
+        color: white;
+
+        &:hover{
+            background-color: $blue-700;
+        }
+    }
+
+}
+
+

@@ -2,6 +2,7 @@
 @import "./header";
 @import "./animations";
 @import "./landingPage";
+@import "./deanSection";
 @import "./media";
 
 * {
@@ -12,7 +13,7 @@
 
 body::-webkit-scrollbar{
     
-    width: 0.5vw;
+    width: 0.7vw;
 
 
     &-track{

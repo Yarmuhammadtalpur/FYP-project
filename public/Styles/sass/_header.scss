@@ -53,10 +53,59 @@ header{
 }
 
 .navbar{
-    font-family: $nav-fonts;
-    font-size: .965rem;
-    background-color: $blue-800;    
-    font-weight: 400;
+    font-family: $font-primary;
+    background-color: $blue-900;
+
+    //button animations
+
+    .navbar-toggler{
+        border: 1px solid $color-white;
+        cursor: pointer;
+        width: 1.8em;
+        height: 1.8em;
+        padding: 0 0 0.15em 0.25em;        
+        transition: all .5s ease-in-out;
+
+    }
+
+    .navbar-toggler-line,
+    .navbar-toggler-line::after,
+    .navbar-toggler-line::before{
+        width: 1.5rem;
+        height: .2rem;
+        background-color: $color-white;
+        border-radius: 5px;
+        position: absolute;
+        transition: all .5s ease-in-out;
+    }
+
+    .navbar-toggler-line::before{
+        content: '';
+        display: block;
+        transform: translateY(-7px);
+    }
+
+    .navbar-toggler-line::after{
+        content: '';
+        display: block;
+        transform: translateY(7px);
+    }
+
+   .navbar-toggler.collapsed .navbar-toggler-line{
+            transform: translateX(-15px);
+            background-color: transparent;
+        }
+
+    .navbar-toggler.collapsed .navbar-toggler-line::before{
+        transform: rotate(45deg) translate(10px, -10px);
+
+    }
+    .navbar-toggler.collapsed .navbar-toggler-line::after{
+        transform: rotate(-45deg) translate(10px, 10px);
+    }
+    
+
+    //button animations end
 
     .dropdown-toggle::after{
         transition: .3s;
@@ -65,27 +114,28 @@ header{
  
 }
 .navbar-nav .nav-item .nav-link{
-
+        
+        border-radius: 5px;
         color: $nav-font-color;
+        font-size: .9rem;
         &:hover{
-        transition: .5s;
+        transition: .3s;
         color: $color-white;
+        background-color: $blue-700;
         }
 }
 
 .nav-item{
-    padding: 0 2rem;
+    padding: 0 1.4rem;
 }
 
-.collapse .navbar-nav.nav-item.dropdown-menu::before {
-     transition: .3s;
- }
 
-.dropdown-menu{
-    background-color: $blue-700;    
-    animation: slide .5s ease 1;
+ .dropdown-menu{
+    background-color: $blue-800;
+    animation: slideDown .2s ease-in 1;
     
 }
+
 
 .fas{
     transition: .3s;
@@ -99,15 +149,17 @@ header{
 
     }
 
+    
 
 .dropdown-item{
     padding: .7rem;
     font-size: .8rem;    
-    color: $nav-font-color;transition: .5s;
+    color: $nav-font-color;
+    transition: .3s;
 
     &:hover{
         color: $color-white;
-        background-color: $blue-400;
+        background-color: $blue-600;
         
 
     }

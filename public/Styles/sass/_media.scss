@@ -28,8 +28,18 @@
     }
     
     
+    //dean_section
 
-}
+    .btm-padding{
+        padding-bottom: 3rem;
+    }
+
+    section .dean-section{        
+        padding: 5rem 7rem;
+    }
+
+
+}   //media end
 
 @media only screen and (max-width: 480px) {
 
@@ -43,5 +53,9 @@
         }
     }
 
+   //dean_section
+    section .dean-section{        
+        padding: 5rem 4rem;
+    }
     
-}
+}   //media end
