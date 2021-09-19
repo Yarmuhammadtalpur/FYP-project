@@ -1,7 +1,3 @@
-img {
-  pointer-events: none;
-}
-
 header a {
   text-decoration: none;
 }
@@ -150,6 +146,104 @@ header .logo .title h2 {
 .dropdown-item:hover {
   color: white;
   background-color: #1E88E5;
+}
+
+.preloader-wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 5000000000;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffefdb;
+  opacity: 1;
+}
+
+.preloader11 {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+}
+
+.preloader11 hr {
+  border: 0;
+  margin: 0;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-animation: preloader11 2s ease infinite;
+          animation: preloader11 2s ease infinite;
+}
+
+.preloader11 :first-child {
+  background: #19A68C;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+}
+
+.preloader11 :nth-child(2) {
+  background: #F63D3A;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.preloader11 :nth-child(3) {
+  background: #FDA543;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.preloader11 :last-child {
+  background: #193B48;
+}
+
+@-webkit-keyframes preloader11 {
+  0%, 100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(160%);
+            transform: translate(160%);
+  }
+  50% {
+    -webkit-transform: translate(160%, 160%);
+            transform: translate(160%, 160%);
+  }
+  75% {
+    -webkit-transform: translate(0, 160%);
+            transform: translate(0, 160%);
+  }
+}
+
+@keyframes preloader11 {
+  0%, 100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(160%);
+            transform: translate(160%);
+  }
+  50% {
+    -webkit-transform: translate(160%, 160%);
+            transform: translate(160%, 160%);
+  }
+  75% {
+    -webkit-transform: translate(0, 160%);
+            transform: translate(0, 160%);
+  }
 }
 
 @-webkit-keyframes slideDown {
@@ -305,6 +399,22 @@ header .logo .title h2 {
 
 .dean-section .btn:hover {
   background-color: #1976D2;
+}
+
+.dean-section .img_effects {
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
+}
+
+.dean-section .img_effects:hover {
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
+  -webkit-box-shadow: 0px 2px 14px 9px #888888;
+          box-shadow: 0px 2px 14px 9px #888888;
+}
+
+.map-section {
+  background-color: #6b6b6b;
 }
 
 @media only screen and (max-width: 768px) {
