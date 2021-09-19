@@ -149,7 +149,7 @@ header .logo .title h2 {
 }
 
 .preloader-wrapper {
-  height: 100%;
+  height: 200%;
   width: 100%;
   position: fixed;
   z-index: 5000000000;
