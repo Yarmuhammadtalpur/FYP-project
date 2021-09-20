@@ -742,6 +742,7 @@ iframe {
   }
   .card .card-title, .card .card-text {
     padding: 1rem .5rem;
+    text-align: left;
   }
   .card .card-img-top {
     padding-top: 1.5rem;
@@ -771,6 +772,7 @@ iframe {
   }
   .card .card-title, .card .card-text {
     padding: 1rem .5rem;
+    text-align: unset;
   }
   .card .card-img-top {
     padding-top: 1.5rem;
