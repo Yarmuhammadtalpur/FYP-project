@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
 header a {
   text-decoration: none;
 }
@@ -553,7 +554,8 @@ header .logo .title h2 {
 }
 
 .map-section {
-  background-color: #6b6b6b;
+  padding: 5rem 2.1rem;
+  background-color: #f4f0f0;
 }
 
 .map-align {
@@ -563,9 +565,142 @@ header .logo .title h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 5rem 2rem;
+}
+
+iframe {
+  height: 35rem;
+  width: 100%;
+}
+
+.card {
+  background-color: #f4f0f0;
+  border: none;
+  font-size: "Roboto", sans-serif;
+}
+
+.card .card-text {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.card .card-title, .card .card-text {
+  padding: 1rem 2rem;
+}
+
+.card .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem 2rem;
+}
+
+.card .card-img-top {
+  height: 10rem;
+  width: 12rem;
+}
+
+#Learn-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+#Learn-btn.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+#Learn-btn.learn-more .circle {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+#Learn-btn.learn-more .circle .icon {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+#Learn-btn.learn-more .circle .icon.arrow {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+#Learn-btn.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#Learn-btn.learn-more .button-text {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#Learn-btn:hover .circle {
+  width: 100%;
+}
+
+#Learn-btn:hover .circle .icon.arrow {
+  background: #fff;
+  -webkit-transform: translate(1rem, 0);
+          transform: translate(1rem, 0);
+}
+
+#Learn-btn:hover .button-text {
+  color: #fff;
 }
 
 @media only screen and (max-width: 768px) {
@@ -598,6 +733,18 @@ header .logo .title h2 {
   section .dean-section {
     padding: 5rem 7rem;
   }
+  .map-section {
+    padding: 5rem 5rem;
+  }
+  .card h2 {
+    font-size: 1.5rem;
+  }
+  .card .card-title, .card .card-text {
+    padding: 1rem .5rem;
+  }
+  .card .card-img-top {
+    margin-top: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -609,6 +756,22 @@ header .logo .title h2 {
   }
   section .dean-section {
     padding: 5rem 2rem;
+  }
+  .map-section {
+    padding: 5rem .5rem;
+  }
+  iframe {
+    height: 20rem;
+    width: 100%;
+  }
+  .card h2 {
+    font-size: 1.5rem;
+  }
+  .card .card-title, .card .card-text {
+    padding: 1rem .5rem;
+  }
+  .card .card-img-top {
+    padding-top: 1.5rem;
   }
 }
 

@@ -38,6 +38,28 @@
         padding: 5rem 7rem;
     }
 
+    //map_section
+
+    .map-section{
+        padding: 5rem 5rem;
+    }
+
+    .card{
+
+        h2{
+            font-size: 1.5rem;
+        }
+        .card-title, .card-text{
+            padding: 1rem .5rem;
+        }
+    
+    .card-img-top{
+        margin-top: 1.5rem;
+    }
+    
+    }
+
+
 
 }   //media end
 
@@ -58,4 +80,34 @@
         padding: 5rem 2rem;
     }
     
+
+//map section
+
+.map-section{
+    padding: 5rem .5rem;
+}
+
+iframe{
+    height: 20rem;
+    width: 100%;
+    
+}
+
+.card{
+
+    h2{
+        font-size: 1.5rem;
+    }
+    .card-title, .card-text{
+        padding: 1rem .5rem;
+    }
+
+.card-img-top{
+    padding-top: 1.5rem;
+}
+
+}
+
+
+
 }   //media end
