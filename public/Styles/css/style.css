@@ -744,7 +744,8 @@ iframe {
     padding: 1rem .5rem;
   }
   .card .card-img-top {
-    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    width: 10rem;
   }
 }
 
@@ -773,6 +774,7 @@ iframe {
   }
   .card .card-img-top {
     padding-top: 1.5rem;
+    width: 10rem;
   }
 }
 
