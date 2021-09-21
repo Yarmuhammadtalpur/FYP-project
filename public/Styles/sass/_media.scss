@@ -63,7 +63,6 @@
     }
 
 
-
 }   //media end
 
 @media only screen and (max-width: 480px) {
@@ -77,7 +76,23 @@
             text-align: left;
         }
     }
+    .main-landing{
+        .carousel-caption{
 
+            h5{
+                padding: 0;
+            }
+            p{
+                width: auto;
+            }
+
+
+
+        }
+
+
+
+    }
 
 //dean_section
 

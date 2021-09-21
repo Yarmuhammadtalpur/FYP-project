@@ -2,7 +2,11 @@
 header{
     
     a{
-        text-decoration: none;
+        text-decoration: none;        
+        color: $color-black;
+        &:hover{
+            color: $color-black;
+        }  
     }
 
     ul{
@@ -38,7 +42,7 @@ header{
         h2{
             font-size: clamp(1rem, 1.4vw, 1.2rem);
             font-weight: 600;
-            letter-spacing: 0;            
+            letter-spacing: 0;          
             
         }
         
@@ -110,10 +114,10 @@ header{
  
 }
 .navbar-nav .nav-item .nav-link{
-        
+        padding: 10px;
         border-radius: 5px;
         color: $nav-font-color;
-        font-size: .9rem;
+        font-size: 1rem;
         &:hover{
         transition: .3s;
         color: $color-white;
@@ -122,7 +126,7 @@ header{
 }
 
 .nav-item{
-    padding: 0 1.4rem;
+    padding: 0 1.5rem;
 }
 
 
@@ -148,8 +152,8 @@ header{
     
 
 .dropdown-item{
-    padding: .7rem;
-    font-size: .8rem;    
+    padding: .8rem;
+    font-size: .95rem;    
     color: $nav-font-color;
     transition: .3s;
 

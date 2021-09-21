@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Mukta:700");
 header a {
   text-decoration: none;
+  color: #000000;
+}
+
+header a:hover {
+  color: #000000;
 }
 
 header ul {
@@ -104,9 +109,10 @@ header .logo .title h2 {
 }
 
 .navbar-nav .nav-item .nav-link {
+  padding: 10px;
   border-radius: 5px;
   color: #e6e0e0;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -117,7 +123,7 @@ header .logo .title h2 {
 }
 
 .nav-item {
-  padding: 0 1.4rem;
+  padding: 0 1.5rem;
 }
 
 .dropdown-menu {
@@ -137,8 +143,8 @@ header .logo .title h2 {
 }
 
 .dropdown-item {
-  padding: .7rem;
-  font-size: .8rem;
+  padding: .8rem;
+  font-size: .95rem;
   color: #e6e0e0;
   -webkit-transition: .3s;
   transition: .3s;
@@ -452,7 +458,7 @@ header .logo .title h2 {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.7;
+  opacity: 0.68;
 }
 
 .main-landing .carousel-caption {
@@ -462,12 +468,13 @@ header .logo .title h2 {
 }
 
 .main-landing .carousel-caption h5 {
+  padding: 0 5rem 0 0;
   text-transform: uppercase;
   font-weight: 700;
   text-align: left;
   letter-spacing: 2px;
   font-size: clamp(30px, 4vw, 50px);
-  text-shadow: -3px 6px 10px rgba(0, 0, 0, 0.6);
+  text-shadow: -3px 1px 8px rgba(0, 0, 0, 0.82);
   -webkit-animation-delay: .3s;
           animation-delay: .3s;
   -webkit-animation-duration: .8s;
@@ -475,8 +482,9 @@ header .logo .title h2 {
 }
 
 .main-landing .carousel-caption p {
-  font-size: clamp(10px, 2.5vw, 15px);
-  text-shadow: 2px 8px 10px rgba(0, 0, 0, 0.53);
+  width: 40rem;
+  font-size: clamp(12px, 2.1vw, 15px);
+  text-shadow: -3px 1px 8px rgba(0, 0, 0, 0.82);
   line-height: 1.7;
   -webkit-animation-delay: .4s;
           animation-delay: .4s;
@@ -574,6 +582,8 @@ header .logo .title h2 {
 iframe {
   height: 35rem;
   width: 100%;
+  -webkit-clip-path: polygon(0% 10%, 100% 9%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 10%, 100% 9%, 100% 100%, 0% 100%);
 }
 
 .card {
@@ -608,6 +618,48 @@ iframe {
 .card .card-img-top {
   height: 10rem;
   width: 12rem;
+}
+
+.tilt_effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.tilt_effect svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 129px;
+}
+
+.tilt_effect .shape-fill {
+  fill: #FFFFFF;
+}
+
+.tilt_effect_bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.tilt_effect_bottom svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 129px;
+}
+
+.tilt_effect_bottom .shape-fill {
+  fill: #FFFFFF;
 }
 
 #Learn-btn {
@@ -704,6 +756,132 @@ iframe {
   color: #fff;
 }
 
+.department-section {
+  padding: 5rem 3rem;
+}
+
+.department-section .cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.department-section .cards-container .box {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+
+.department-section .cards-container .card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: white;
+  margin: 2rem auto;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .5s;
+  transition: .5s;
+  text-decoration: none;
+}
+
+.department-section .cards-container .card:hover {
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.department-section .cards-container .card:before,
+.department-section .cards-container .card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.department-section .cards-container .card:after {
+  background-color: #f8f8f8;
+}
+
+.department-section .cards-container .card:before {
+  background-color: #e7e6e6;
+}
+
+.department-section .cards-container .card:hover:before {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.department-section .cards-container .card:hover:after {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.department-section .cards-container .card .imgBx {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 80px;
+  right: 10px;
+  background: #222;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.department-section .cards-container .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.department-section .cards-container .card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.department-section .cards-container .card .details {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 60px;
+  text-align: center;
+}
+
+.department-section .cards-container .card .details h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
 @media only screen and (max-width: 768px) {
   .logo {
     -webkit-box-pack: center;
@@ -757,6 +935,12 @@ iframe {
   .logo .title {
     text-align: left;
   }
+  .main-landing .carousel-caption h5 {
+    padding: 0;
+  }
+  .main-landing .carousel-caption p {
+    width: auto;
+  }
   section .dean-section {
     padding: 5rem 2rem;
   }
@@ -802,5 +986,9 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: #4e68da;
+}
+
+section {
+  position: relative;
 }
 /*# sourceMappingURL=style.css.map */

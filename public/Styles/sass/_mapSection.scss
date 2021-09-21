@@ -13,7 +13,8 @@
 iframe{
     height: 35rem;
     width: 100%;
-    
+    clip-path: polygon(0% 10%,100.00% 9.00%,100% 100%,0% 100%);
+
 }
 
 .card{
@@ -42,6 +43,51 @@ iframe{
 }
 
 }
+
+
+.tilt_effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.tilt_effect svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 129px;
+}
+
+.tilt_effect .shape-fill {
+  fill: #FFFFFF;
+}
+
+
+.tilt_effect_bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.tilt_effect_bottom svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 129px;
+}
+
+.tilt_effect_bottom .shape-fill {
+  fill: #FFFFFF;
+}
+
+
 
 
 

@@ -13,7 +13,7 @@
         height: 100%;
         width: 100%;
         object-fit: cover;     
-        opacity: 0.7;
+        opacity: 0.68;
     }
 
     }
@@ -25,12 +25,13 @@
 
 
         h5{
+            padding: 0 5rem 0 0;
             text-transform: uppercase;
             font-weight: 700;
             text-align: left;
             letter-spacing: 2px;
             font-size: clamp(30px, 4vw, 50px);
-            text-shadow:-3px 6px 10px rgba(0,0,0,0.6);
+            text-shadow: -3px 1px 8px rgba(0,0,0,0.82);
             animation-delay: .3s;
             animation-duration: .8s;
             
@@ -38,8 +39,9 @@
         }
 
         p{
-            font-size: clamp(10px, 2.5vw, 15px);
-            text-shadow: 2px 8px 10px rgba(0,0,0,0.53);
+            width: 40rem;
+            font-size: clamp(12px, 2.1vw, 15px);
+            text-shadow: -3px 1px 8px rgba(0,0,0,0.82);
             line-height: 1.7;
             animation-delay: .4s;
             animation-duration: 1s;
