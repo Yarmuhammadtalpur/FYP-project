@@ -40,3 +40,21 @@ app.get('/home/dean_message', (req, res)=>{
 
     res.render('dean_page');
 });
+
+app.get('/departments/software-engineering', (req, res)=>{
+    res.render('dept_software');
+});
+
+app.get('/departments/information-technology', (req, res)=>{
+    res.render('dept_IT');
+});
+
+
+app.get('/departments/electronics', (req, res)=>{
+    res.render('dept_electronics');
+});
+
+
+app.get('/departments/telecommunication', (req, res)=>{
+    res.render('dept_telecommunication');
+});

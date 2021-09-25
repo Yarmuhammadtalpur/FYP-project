@@ -2,12 +2,17 @@
 
     padding: 5rem 3rem;
 
+    font-family: $font-primary;
+    .align-item{
+        display: flex;        
+        flex-direction: column;
+        height: 20vh;
+    }
     .cards-container{
           
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: $font-primary;
 
   .box{
     width: 100%;
@@ -69,11 +74,6 @@
   transition: 0.5s;
   z-index: 1;
   }
-  
-//   .card:hover .imgBx
-//   {
-//     bottom: 10px;
-//   }
 
 .card:hover{
     transform: scale(1.1);

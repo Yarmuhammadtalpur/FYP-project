@@ -6,13 +6,17 @@
 @import "./deanSection";
 @import "./mapSection";
 @import "./department";
+@import "./dept-chairmain-section";
+@import "./linksSection";
+@import "./footer";
 @import "./media";
 
-* {
+html, * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body::-webkit-scrollbar{
     
@@ -31,7 +35,4 @@ body::-webkit-scrollbar{
 
         }
     }
-}
-section{
-    position: relative;
 }

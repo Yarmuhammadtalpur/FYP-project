@@ -1,0 +1,170 @@
+
+.footer-top{
+    // background-color: #111;
+    padding-top: 2rem;
+    background: linear-gradient(40deg, rgba(0, 0, 0, 1), rgba(31, 30, 30, 0.8)),
+    url("/public/Images/image_fet_footer.jpg");
+    background-size: cover;
+    background-position: top;
+
+
+    .item_space{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+
+
+    }
+.about_site, .address_text{
+    color: hsl(0, 0%, 60%);
+    line-height: 25px;
+    font-size: 1.1rem;
+}
+
+h2, h3{
+    color: $color-white;
+}
+
+h2{
+    font-size: 1.1rem;
+}
+
+.fas{
+    padding: .5rem;
+    font-size: 1.2rem;
+    color: white;
+
+}
+
+.fab {
+    margin: 1rem .5rem;
+    padding: .3rem;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    transition: .5s;
+}
+
+.fab_facebook{
+    color: $color-white;
+    background-color: $facebook-color;
+    &:hover{
+        color: $facebook-color ;
+        background-color: $color-white;
+
+    }
+    
+}
+
+.fab_youtube{
+    color: $color-white;
+    background-color: $youtube-color;
+    &:hover{
+        color: $youtube-color;
+    background-color: $color-white;
+    }    
+}
+
+.fab_twitter{
+    color: $color-white;
+    background-color: $twitter-color;
+    &:hover{
+        color: $twitter-color;
+    background-color: $color-white;
+    }    
+}
+
+.sagment-one,
+.sagment-two,
+.sagment-three{
+
+    margin-top: 1.5rem;
+
+}
+
+
+.sagment-one {
+
+    h3 { 
+        font-family: $font-primary;
+        letter-spacing: 2px;
+
+    &::before{
+        content: "|";
+        color: $blue-400;
+        padding-right: 10px;
+    }
+}
+
+}
+
+.sagment-two {
+
+    h3 {       
+        font-family: $font-primary; 
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+    }
+
+
+    p{
+        font-family: $font-secondary;
+        line-height: 1.5;
+    }
+
+
+}
+
+.sagment-three{
+    font-family: $font-secondary;
+    h3{
+        font-family: $font-primary;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .input_bar{
+        padding: .2rem .5rem;
+        width: 70%;
+        margin-top: .5rem;
+        text-transform: uppercase;
+        border-style: none;
+
+    }
+
+    form .submit_btn{
+        padding: .2rem 0;
+        margin-top: .1rem;
+        background: $blue-400;
+        border: none;
+        width: 70%;
+        transition: .4s;
+        font-family: $font-primary;
+        font-weight: 500;
+
+        &:hover{
+            background: $blue-800;
+            color: $color-white;
+            box-shadow: 0px 2px 15px -5px #FFF4F6;
+        }
+
+    }
+}
+
+
+
+}
+
+.footer_bottom_rights{
+    font-family: $font-primary;
+    width: 100%;
+    background: transparent;
+    color: $color-white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    text-align: center;
+    margin-top: 1rem;
+}
