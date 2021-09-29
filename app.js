@@ -22,12 +22,12 @@ mongoose.connect(process.env.mongodb_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-    .then((result)=>{
+    // .then((result)=>{
         app.listen(port, (req, res) => {
         console.log("Your Server and Database is connected")
          })
-    })
-    .catch((err)=> console.log("Unable to Start: "+err))
+    // })
+    // .catch((err)=> console.log("Unable to Start: "+err))
 
 
 
@@ -58,3 +58,32 @@ app.get('/departments/electronics', (req, res)=>{
 app.get('/departments/telecommunication', (req, res)=>{
     res.render('dept_telecommunication');
 });
+
+app.get('/contact-us', (req, res)=>{
+    res.render('contact-us');
+});
+
+
+app.get('/section/faqs', (req, res)=>{
+    res.render('faqs');
+});
+
+app.get('/about', (req, res) =>{ 
+    res.render('about');
+})
+
+app.get('/newsletter', (req, res)=>{
+    res.render('formfilled',{
+        formtp: "Thankyou, For applying for our daily Newsletter, We'll keep you updated"
+    });
+})
+
+app.get('/contact-us/resp', (req, res)=>{
+    res.render('formfilled',{
+        formtp: "Informatin Received, Thankyou, We'll get in touch with you."
+    });
+})
+
+app.post('/contact-us/resp', (req, res)=>{
+    res.redirect("/contact-us/resp");
+})

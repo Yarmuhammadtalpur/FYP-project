@@ -1,0 +1,33 @@
+.faq_section{
+    padding: 2rem 0;
+
+
+ .faq_heading{   
+     font-weight: 600;
+     font-size: 1.135rem;
+ }
+
+ .faq_text{
+     font-family: $font-secondary;
+     font-size: 1rem;
+     font-weight: 400;
+ }
+
+ .accordion {
+    
+
+     .accordion-item{
+        margin: .23rem 0;
+        border-radius: 5px;         
+        box-shadow: 0px 5px 15px -3px rgba(50,50,50,0.72);
+
+         .accordion-button{
+            border-radius: 5px;
+         }
+
+     }
+
+    
+ }
+
+}

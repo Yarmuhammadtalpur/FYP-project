@@ -89,6 +89,12 @@
                font-size: 25px;
                color: $color-black;
               } 
+
+              .card .details p{
+                font-family: $font-secondary;
+                color: $color-black;
+                font-size: 18px;
+              }
         }
 
 
@@ -97,7 +103,6 @@
 
 
         .quick_link_section{
-            width: auto;
             display: flex;
             align-items: center;
             justify-content: center;

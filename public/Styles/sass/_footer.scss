@@ -1,6 +1,6 @@
 
 .footer-top{
-    // background-color: #111;
+    bottom: 0;
     padding-top: 2rem;
     background: linear-gradient(40deg, rgba(0, 0, 0, 1), rgba(31, 30, 30, 0.8)),
     url("/public/Images/image_fet_footer.jpg");
@@ -157,14 +157,15 @@ h2{
 }
 
 .footer_bottom_rights{
-    font-family: $font-primary;
+    font-family: $font-primary;   
     width: 100%;
-    background: transparent;
+    background: black;
     color: $color-white;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;    
     text-align: center;
-    margin-top: 1rem;
+    margin: 0;
+    padding: .7rem 0;
 }

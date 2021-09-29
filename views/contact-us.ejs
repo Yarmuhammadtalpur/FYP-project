@@ -1,0 +1,66 @@
+<%- include('partials/nav') %> 
+
+<section class="contact_us">
+<div class="container">
+
+    <div class="row content ">
+
+        <div class="col-lg-6 col-md-12 col-xs-12 mail_logo">
+            <div class="social_icons">
+                    <img  class="social_icon" src="/public/Images/social/instagram.png" alt="logo_social">
+                    <img class="social_icon" src="/public/Images/social/facebook.png" alt="logo_social">
+                    <img class="social_icon" src="/public/Images/social/twitter.png" alt="logo_social">
+                    <img class="social_icon" src="/public/Images/social/youtube.png" alt="logo_social">
+                    <img class="social_icon" src="/public/Images/social/linkin.png" alt="logo_social">
+            </div>
+                <img class="email_icon" src="/public/Images/social/email_blue.png" alt="mail">
+        </div>
+
+
+        <div class="col-lg-6 col-md-12 col-xs-12 form_field">
+            <div class="contact_form">
+                <h1>Get in touch with Us.</h1>
+             <form action="/contact-us/resp">
+
+                <div class="input_box">
+            <input type="text" name="first_name"  required autocomplete="off">
+            <span>First Name</span>
+                </div>
+
+                <div class="input_box">
+            <input type="text" name="last_name" required autocomplete="off">
+            <span>Last Name</span>
+                </div>
+
+                <div class="input_box">
+            <input type="email" name="last_name" required autocomplete="off">
+            <span>Email</span>
+                </div>
+
+                <div class="input_box">
+            <textarea name="message" rows="3" required autocomplete="off"></textarea>
+            <span>Type your message</span>
+                </div>
+
+                <div class="input_box submit_btn">
+            <input type="submit" value="Submit" required>
+                </div>
+
+
+
+             </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+
+
+<%- include('partials/footer') %> 

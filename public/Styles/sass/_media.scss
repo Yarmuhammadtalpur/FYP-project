@@ -71,6 +71,38 @@
     justify-content: center;
 }
 
+//contact_us
+
+.contact_us{
+    .social_icon{
+        height: 4rem;
+        width: 4rem;
+    }
+    .email_icon{
+
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .social_icons img:nth-child(1){
+        top: 8%;
+        left: 42%;
+
+    }
+
+    .social_icons img:nth-child(3){
+        top: 65%;
+        left: 70%;
+        
+    }
+
+    .social_icons img:nth-child(5){
+        top: 65%;
+        left: 10%;
+        
+    }
+}
+
 
 }   //media end
 
@@ -158,6 +190,46 @@ iframe{
                 padding: 0 1rem;
             }
         }   
+    }
+}
+
+//contact_us
+
+.contact_us{
+    padding: 0;
+    margin: 0;
+    .social_icon{
+        height: 4rem;
+        width: 4rem;
+    }
+    
+    .email_icon{
+
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .mail_logo{
+        background: radial-gradient(400px, $blue-400, transparent 50%);
+        
+    }
+
+    .social_icons img:nth-child(1){
+        top: 8%;
+        left: 42%;
+
+    }
+
+    .social_icons img:nth-child(3){
+        top: 65%;
+        left: 70%;
+        
+    }
+
+    .social_icons img:nth-child(5){
+        top: 65%;
+        left: 10%;
+        
     }
 }
 

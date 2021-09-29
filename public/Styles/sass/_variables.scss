@@ -13,7 +13,9 @@
    $blue-A100: #82B1FF;   
    $blue-A200: #448AFF;   
    $blue-A400: #2979FF;   
-   $blue-A700: #2962FF;
+   $blue-A700: #2962FF; 
+   $blue-dark: #031f6e; 
+
 
    $bg: #171f30;
    $c-01: #5389a6;
@@ -40,3 +42,17 @@
 
 
    $logo-nav-height: 18vh;
+
+
+   $normal-font: .938rem;
+   $small-font: .813rem;
+   $smaller-font: .75rem;
+
+   @media only screen and (min-width: 768px) {
+
+      $normal-font: 1rem;
+      $small-font: .875rem;
+      $smaller-font: .813rem;
+
+
+   }

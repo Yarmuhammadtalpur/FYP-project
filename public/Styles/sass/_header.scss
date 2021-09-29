@@ -1,3 +1,30 @@
+html, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body::-webkit-scrollbar{
+    
+    width: 0.7vw;
+
+
+    &-track{
+        background-color: $color-white;
+    }
+    &-thumb{
+        border-radius: 5px;
+        background-color: $scroll-primary;
+
+        &:hover {    
+            background-color: $scroll-secondary;
+
+        }
+    }
+}
+
+
 
 header{
     

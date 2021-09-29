@@ -1,0 +1,169 @@
+
+
+.contact_us{
+    background-color: #05a3d8;
+    background-image: linear-gradient(315deg, #05a3d8 0%, #029ccf 74%);
+    
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+
+
+   .glass_effect{       
+    margin: auto;
+    border-radius: 1em;
+    border: 1px solid transparentize($color-white, 0.5);
+    text-shadow: 0 0 1em transparentize($color-black, 0.5);
+    background: transparentize($color-white, 0.8);
+    backdrop-filter: blur(20px);
+    transform: perspective(500px);
+
+   }
+
+    .content{
+        position: relative;
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5rem 1rem;
+        overflow: hidden;
+    }
+    .mail_logo{
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(500px, $blue-200, transparent 50%);
+        margin-top: -50px;
+        
+    }
+    .social_icon{
+        height: 5rem;
+        width: 5rem;
+        cursor: pointer;
+    }
+
+    .email_icon{
+        height: 17rem;
+        width: 17rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50% );
+        // filter: drop-shadow(0px 0px 100px $blue-400);      
+    }
+    .social_icons{
+        height: 100%;
+        animation: rotation 60s linear infinite;
+    }
+    .social_icons img{
+        position: absolute;
+    }
+    .social_icons img:nth-child(1){
+        top: 0;
+        left: 42%;
+
+    }
+    .social_icons img:nth-child(2){
+        top: 25%;
+        right: 0;
+        
+    }
+    .social_icons img:nth-child(3){
+        top: 70%;
+        left: 70%;
+        
+    }
+    .social_icons img:nth-child(4){
+        top: 25%;
+        left: 0;
+        
+    }
+    .social_icons img:nth-child(5){
+        top: 70%;
+        left: 10%;
+        
+    }
+    
+    h1{
+        color: white;
+    }
+
+
+
+
+    .form_field{
+        position: relative;
+        text-shadow: none;
+        padding: 2rem 0;
+
+        .contact_form{
+            width: 100%;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+
+            h1{
+                color: black;
+                font-family: $font-primary;
+            }
+
+            .input_box{
+                position: relative;
+                width: 100%;
+
+                input , 
+                textarea
+                {
+                    width: 100%;
+                    padding: .2rem 0;
+                    font-size: 1.1rem;
+                    margin: 1rem 0;
+                    border: none;
+                    border-bottom: 2px solid #333;
+                    outline: none;
+                    resize: none;
+                }
+
+                span{
+                    position: absolute;
+                    left: 0;
+                    padding: .2rem 0;
+                    font-size: 1rem;
+                    margin: 10px 0;
+                    pointer-events: none;
+                    transition: .5s;
+                    color: #666;
+                    font-family: $font-secondary;
+                }
+
+                
+            }
+
+
+            
+        }
+
+        .contact_form .input_box input:focus ~ span,
+        .contact_form .input_box input:valid ~ span, 
+        .contact_form .input_box textarea:focus ~ span,
+        .contact_form .input_box textarea:valid ~ span{
+
+            color: $blue-500;
+            font-size: .8rem;
+            transform: translateY(-20px);
+        }
+
+        .submit_btn{
+            input:hover{
+                transition: .5s;
+                background-color: $blue-400;
+            }
+        }
+
+    }
+    
+}
