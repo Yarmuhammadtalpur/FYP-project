@@ -1,0 +1,11 @@
+.table_title{
+font-family: $font-primary;
+margin-bottom: 2rem;
+}
+
+.table-striped{
+    font-family: $font-secondary;
+    .table-primary{
+        font-family: $font-primary;
+    }
+}

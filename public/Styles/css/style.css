@@ -387,6 +387,23 @@ header .logo .title h2 {
   text-align: left;
 }
 
+.main-landing .take_tour {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-landing .take_tour button {
+  font-size: 1.2rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.main-landing .take_tour button:hover {
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .dean-section {
   padding: 5rem 2.1rem;
   font-family: "Roboto Condensed", sans-serif;
@@ -495,21 +512,52 @@ iframe {
 }
 
 .card {
-  padding: .5rem 0;
+  padding: 2rem 0;
   background-color: #f4f0f0;
   border: none;
   font-size: "Roboto", sans-serif;
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card .card-text {
   text-align: justify;
   font-size: 1rem;
   margin-top: -30px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.card .card-title {
+  font-family: "Roboto", sans-serif;
 }
 
 .card .card-title, .card .card-text {
   padding: 1rem 2rem;
+}
+
+.card .take_tour {
+  font-family: "Roboto", sans-serif;
+}
+
+.card .take_tour button {
+  font-size: 1.2rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.card .take_tour button:hover {
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .card .image {
@@ -998,24 +1046,13 @@ iframe {
           align-items: center;
 }
 
-.contact_us .glass_effect {
-  margin: auto;
-  border-radius: 1em;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  text-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  -webkit-transform: perspective(500px);
-          transform: perspective(500px);
-}
-
 .contact_us .content {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -1593,6 +1630,500 @@ iframe {
   font-size: 1.3rem;
 }
 
+.login_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+.login_section .login {
+  margin: 0;
+  left: 50%;
+  position: relative;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #0D47A1;
+  border-radius: 9px;
+  border-top: 10px solid #42A5F5;
+  border-bottom: 10px solid #42A5F5;
+  -webkit-box-shadow: 0px 0px 28px -6px #000000;
+          box-shadow: 0px 0px 28px -6px #000000;
+  width: 400px;
+  height: 500px;
+}
+
+.login_section .box h4 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 94px;
+  margin-bottom: 2rem;
+}
+
+.login_section .box h4 span {
+  font-family: "Roboto", sans-serif;
+  color: #c9c9c9;
+}
+
+.login_section .box h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-top: -15px;
+  margin-bottom: 70px;
+}
+
+.login_section .box input[type="text"], .login_section .box input[type="password"] {
+  display: block;
+  margin: 20px auto;
+  background: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 10px;
+  width: 80%;
+  outline: none;
+  color: #000000;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.login_section ::-webkit-input-placeholder {
+  color: #565f79;
+}
+
+.login_section .box input[type="text"]:focus, .login_section .box input[type="password"]:focus {
+  outline: 5px solid #42A5F5;
+}
+
+.login_section .btn1 {
+  border: 0;
+  background: #1976D2;
+  color: #dfdeee;
+  border-radius: 100px;
+  width: 40%;
+  height: 49px;
+  font-size: 16px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.login_section .btn1:hover {
+  background: #1565C0;
+}
+
+.login_section .dnthave {
+  position: absolute;
+  top: 92%;
+  left: 24%;
+}
+
+.login_section .typcn {
+  position: absolute;
+  right: 12%;
+  top: 309px;
+  color: #3b476b;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.login_section .typcn.active {
+  color: #90CAF9;
+}
+
+.login_section .error p {
+  background: #ff3333;
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: auto;
+  width: 80%;
+  top: 42%;
+  text-align: center;
+  padding: .3rem;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  display: none;
+}
+
+.timetable .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.timetable .container h1 {
+  margin: 2rem 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.timetable .container h1:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #2b2b2b;
+  text-shadow: -3px 3px 8px rgba(155, 155, 155, 0.63);
+}
+
+.timetable .container h2 {
+  margin: 1.2rem 0;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.timetable .container h2:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #2b2b2b;
+  text-shadow: -3px 3px 8px rgba(158, 158, 158, 0.63);
+}
+
+.timetable .timetable_link {
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+}
+
+.selected_table {
+  margin-bottom: 8rem;
+}
+
+.dash_icon {
+  height: 3rem;
+  width: 3rem;
+  margin: 0 auto;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 240px;
+  background: #0A2558;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: "Roboto", sans-serif;
+}
+
+.sidebar.active {
+  width: 65px;
+}
+
+.sidebar .logo-details {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar .nav-links {
+  margin-top: 10px;
+  padding: 0;
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  height: 50px;
+}
+
+.sidebar .nav-links li a {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li a.active_nav {
+  background: #081D45;
+}
+
+.sidebar .nav-links li a:hover {
+  background: #081D45;
+}
+
+.sidebar .nav-links li i {
+  min-width: 60px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.sidebar .nav-links li a .links_name {
+  color: #fff;
+  font-size: 1.021rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.home-section {
+  position: relative;
+  background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 240px);
+  left: 240px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home-section {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+.home-section nav {
+  font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: calc(100% - 240px);
+  left: 240px;
+  z-index: 100;
+  padding: 0 20px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home-section nav {
+  left: 60px;
+  width: calc(100% - 60px);
+}
+
+.home-section nav .sidebar-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.home-section nav .sidebar-button .dashboard {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav .sidebar-button i {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.home-section nav .profile-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #F5F6FA;
+  border: 2px solid #EFEEF1;
+  border-radius: 6px;
+  height: 50px;
+  min-width: 190px;
+  padding: 0 15px 0 2px;
+}
+
+nav .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+nav .profile-details .admin_name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 10px;
+  white-space: nowrap;
+}
+
+/* Responsive Media Query */
+@media (max-width: 1240px) {
+  .sidebar {
+    width: 60px;
+  }
+  .sidebar.active {
+    width: 220px;
+  }
+  .home-section {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .sidebar.active ~ .home-section {
+    width: calc(100% - 220px);
+    overflow: hidden;
+    left: 220px;
+  }
+  .home-section nav {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .sidebar.active ~ .home-section nav {
+    width: calc(100% - 220px);
+    left: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  nav .sidebar-button .dashboard,
+  nav .profile-details .admin_name,
+  nav .profile-details i {
+    display: none;
+  }
+  .home-section nav .profile-details {
+    height: 50px;
+    min-width: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .sidebar.active ~ .home-section nav .profile-details {
+    display: none;
+  }
+}
+
+.home-content {
+  position: relative;
+  padding-top: 104px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.home-content .overview-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  margin: auto;
+}
+
+.home-content .overview-boxes .card {
+  background-color: #6c8199;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin: 1rem;
+  width: 100%;
+  text-decoration: none;
+  color: #000000;
+}
+
+.home-content .overview-boxes .card:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: -5px 9px 18px -1px #000000;
+          box-shadow: -5px 9px 18px -1px #000000;
+  -webkit-transform: translate(12px, -8px);
+          transform: translate(12px, -8px);
+  outline: 5px solid #495969;
+}
+
+.home-content .overview-boxes .card .rounded-start {
+  height: 8rem;
+  width: 8rem;
+}
+
+.table_title {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 2rem;
+}
+
+.table-striped {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.table-striped .table-primary {
+  font-family: "Roboto", sans-serif;
+}
+
+.timetable_img {
+  height: 5rem;
+  width: 8rem;
+}
+
+.btn_timetable {
+  margin: 2rem 0;
+}
+
+.center_align_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center_align_item .update_form {
+  width: 50%;
+}
+
+.center_align_item .update_form .space_item {
+  margin: 2rem 0;
+}
+
 .newsletter_header {
   height: 50vh;
   display: -webkit-box;
@@ -2002,6 +2533,9 @@ iframe {
   .contact_us .social_icons img:nth-child(5) {
     top: 65%;
     left: 10%;
+  }
+  .dash_footer {
+    padding-left: 5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

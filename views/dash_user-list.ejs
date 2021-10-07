@@ -1,0 +1,102 @@
+<%- include('partials/dash_nav') %>
+
+<div class="home-content">
+  
+  <div class="row overview-boxes">
+    
+
+    <h2 class="table_title">List of Users</h2>
+
+
+    <div class=" table-responsive-md">
+      <table id="dtBasicExample" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th class="th-sm">ID #
+      
+            </th>
+            <th class="th-sm">First Name
+      
+            </th>
+            <th class="th-sm">Last Name
+      
+            </th>
+            <th class="th-sm">Email
+      
+            </th>
+            <th class="th-sm">Message
+            </th>
+            <th class="th-sm">Remove
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+         
+           
+
+          <tr>
+            <% for(var i=0; i<user.length; i++) { %>
+
+
+              
+           
+            <th> <%= i+1 %> </th>
+            <td><%= user[i].first_Name %></td>
+
+            <td><%= user[i].last_name %></td>
+
+            <td><%= user[i].email_address %></td>
+
+            <td><a href="/dashboard/User-contacts/message/<%= user[i]._id %>"><button type="button" class="btn btn-secondary">Read Message</button></a></td>
+
+            <td class="align-middle">
+              <form method="POST" >
+              <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0" name="Id_no" value="<%= user[i]._id %>">
+              Remove
+              </button>
+            </form>
+          </td>
+
+
+
+          
+          </tr>
+          <% }; %>
+
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <th class="th-sm">ID #
+      
+            </th>
+            <th class="th-sm">First Name
+      
+            </th>
+            <th class="th-sm">Last Name
+      
+            </th>
+            <th class="th-sm">Email
+      
+            </th>
+            <th class="th-sm">Message
+            </th>
+            <th class="th-sm">Remove
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    
+
+
+  </div>
+
+  </div>
+</section>
+
+
+
+
+
+<%- include('partials/dash_footer') %> 

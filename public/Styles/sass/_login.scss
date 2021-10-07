@@ -1,0 +1,123 @@
+.login_section{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 100vh;
+    padding: 0 2rem;
+    
+    .login{
+        
+        margin: 0;
+        left: 50%;
+        position: relative;
+        text-align: center;
+        transform: translateX(-50%);
+        background-color: $blue-900;
+        border-radius: 9px;
+        border-top: 10px solid $blue-400;
+        border-bottom: 10px solid $blue-400;
+        box-shadow: 0px 0px 28px -6px #000000;
+        width: 400px;
+        height: 500px;
+      }
+      
+      .box h4 {
+        font-family: $font-primary;
+        color: $color-white; 
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-top:94px;
+        margin-bottom: 2rem;
+      }
+      
+      .box h4 span {
+        font-family: $font-primary;
+        color: hsl(0, 0%, 79%);
+      }
+      
+      .box h5 {
+        font-family: $font-primary;
+        font-size: 1rem;
+        color: $color-white;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        margin-top: -15px;
+        margin-bottom: 70px;
+      }
+      
+      .box input[type = "text"],.box input[type = "password"] {
+        display: block;
+        margin: 20px auto;
+        background: $color-white;
+        border: 0;
+        border-radius: 5px;
+        padding: 14px 10px;
+        width: 80%;
+        outline: none;
+        color: $color-black;
+        transition: all .2s ease-out;
+        
+      }
+      ::-webkit-input-placeholder {
+        color: #565f79;
+      }
+      
+      .box input[type = "text"]:focus,.box input[type = "password"]:focus {
+        outline: 5px solid $blue-400;
+        
+      }
+      
+      .btn1 {
+        border:0;
+        background: $blue-700;
+        color: #dfdeee;
+        border-radius: 100px;
+        width: 40%;
+        height: 49px;
+        font-size: 16px;
+        position: relative;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      
+      .btn1:hover {
+        background: $blue-800;
+      }
+      
+      .dnthave{
+          position: absolute;
+          top: 92%;
+          left: 24%;
+      }
+
+      
+      .typcn {
+        position: absolute;
+        right: 12%;
+        top: 309px;
+        color: #3b476b;
+        font-size: 22px;
+        cursor: pointer;
+      }      
+      
+      .typcn.active {
+        color: $blue-200;
+      }
+
+
+.error p {
+  background: #ff3333;
+  position: relative;
+  font-family: $font-secondary;
+  margin: auto;
+  width: 80%;
+  top: 42%;
+  text-align: center;
+  padding: .3rem;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  display: none;
+}
+
+}

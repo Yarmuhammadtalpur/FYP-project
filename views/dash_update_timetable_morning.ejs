@@ -1,0 +1,36 @@
+<%- include('partials/dash_nav') %>
+
+
+
+<div class="home-content">
+  
+  <div class="row center_align_item">
+
+    
+
+    <div class="update_form">
+      <h1>Update Morning Timetable</h1>
+    <form method="POST" enctype="multipart/form-data">
+
+      <input class="form-control space_item" name="Dept_name" type="text" placeholder="Dept Name" aria-label=".form-control-lg example" required>
+
+      <div class="mb-3 space_item">
+        <input class="form-control" name="file_table" type="file" id="formFile" required>
+      </div>
+
+      <!-- submit form -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+    
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<%- include('partials/dash_footer') %> 

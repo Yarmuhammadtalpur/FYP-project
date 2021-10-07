@@ -1,0 +1,94 @@
+
+<%- include('partials/dash_nav') %>
+
+
+
+<div class="home-content">
+  
+  <div class="row overview-boxes">
+
+
+
+
+
+
+    <h1>TimeTable Morning</h1>
+    <div class="table-responsive-md">
+     <a href="/dashboard/update-timetable/evening/update"><button type="button" class="btn btn-primary btn_timetable">Add New Timetable <i class="fas fa-plus"></i></button></a>
+      <table class="table table-hover table-striped table-bordered">
+        <thead>
+          <tr>
+            <th class="th-sm">Betch 
+      
+            </th>
+
+            <th class="th-sm">Department 
+      
+            </th>
+            
+            <th class="th-sm">File
+            </th>
+            <th class="th-sm">Remove
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+          <% timetable.forEach((timetable) => { %>
+            
+          
+
+
+          <tr>
+            <th class="align-middle"><%=timetable.betch  %></th>
+
+
+            <th class="align-middle"><%=timetable.dept  %></th>
+
+            <td><img class="timetable_img" src="/<%=timetable.file_doc%>" alt=""></td>
+
+            <td class="align-middle">
+              <form method="POST" >
+                <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0" name="timetable_id" value="<%= timetable._id %>">
+                Remove
+                </button>
+          </td>
+            
+          </tr>
+
+          <% }); %>
+
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <th class="th-sm">Betch 
+      
+            </th>
+            
+            <th class="th-sm">File
+            </th>
+            <th class="th-sm">Remove
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+
+    
+  </div>
+
+
+
+</div>
+    
+</div>
+</section>
+
+
+
+
+
+<%- include('partials/dash_footer') %> 

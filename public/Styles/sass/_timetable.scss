@@ -1,0 +1,45 @@
+.timetable{
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        h1{
+            margin: 2rem 0;
+            font-family: $font-primary;
+            transition: .5s;
+
+            &:hover{
+                transition: .5s;
+                color: hsl(0, 0%, 17%);
+                text-shadow: -3px 3px 8px rgba(155, 155, 155, 0.63);
+            }
+        }
+
+        h2{
+            margin: 1.2rem 0;
+            text-align: center;
+            transition: .5s;
+            &:hover{
+                transition: .5s;
+                color: hsl(0, 0%, 17%);
+                text-shadow: -3px 3px 8px rgba(158, 158, 158, 0.63);
+            }
+        }
+       
+    }
+
+
+    .timetable_link{
+        text-decoration: none;
+        color: $color-black;
+        text-align: center;
+    }
+
+}
+
+.selected_table{
+    margin-bottom: 8rem;
+}
+

@@ -49,6 +49,21 @@
         }
     }
 
+
+    
+
+    .take_tour{
+        font-family: $font-primary;
+        button{        
+        font-size: 1.2rem;
+        transition: .4s;
+        &:hover{
+          transition: .4s;
+          transform: scale(1.1);
+        }
+        }
+      }
+
 }
 
 

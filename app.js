@@ -4,16 +4,31 @@ const mongoose = require('mongoose');
 const port = process.env.PORT;
 
 
+
+// getting admin route
+const dashRoute = require('./routes/dashboard')
+
+//geeting timetable Schema
+const Timetable = require('./Model/timetable')
+const Timetable_eve = require('./Model/timetable_evening')
+
+// getting user schema
+const Userdb = require('./Model/user')
+
+
+
 const app = express();
 
 //view engine
 app.set('view engine', 'ejs');
 
 //middleware
-app.use("/public", express.static(__dirname+"/public"))
+app.use("/public/", express.static(__dirname+"/public/"))
+app.use("/uploads",express.static(__dirname+"/uploads/"))
 app.use(express.urlencoded({
     extended: true
 }));
+app.use(express.json());
 
 
 
@@ -59,9 +74,45 @@ app.get('/departments/telecommunication', (req, res)=>{
     res.render('dept_telecommunication');
 });
 
-app.get('/contact-us', (req, res)=>{
-    res.render('contact-us');
-});
+app.route('/contact-us')
+
+        .get((req, res)=> {
+            res.render('contact-us');
+        })
+
+        .post((req, res)=>{
+            if(!req.body){
+                res.status(400).send("error")
+                return;
+            }
+
+            const user = new Userdb({
+                  
+                first_Name: req.body.first_Name,
+                last_name: req.body.last_name,
+                email_address: req.body.email_address,
+                message: req.body.message,
+
+            })
+            user.save()
+            .then( ()=>{
+
+                res.redirect('/contact-us/resp');
+            })
+            .catch(err=>{
+                res.status(500).send("Some Error accured while saving data")
+            })
+
+            
+
+            //saving UserData
+
+           
+                
+
+
+        });
+
 
 
 app.get('/section/faqs', (req, res)=>{
@@ -70,7 +121,110 @@ app.get('/section/faqs', (req, res)=>{
 
 app.get('/about', (req, res) =>{ 
     res.render('about');
-})
+});
+
+//timetable Morning
+
+app.get('/timetable/morning', (req, res) =>{ 
+
+    Timetable.find({}, (err, foundItem)=>{
+        
+        res.render('timetable_morning',{
+                timetable: foundItem
+            });
+
+
+    })
+    
+
+
+});
+
+
+app.get('/timetable/morning', (req, res) =>{ 
+
+    Timetable.find({}, (err, foundItem)=>{
+        
+        res.render('timetable_morning',{
+                timetable: foundItem
+            });
+
+
+    })
+    
+
+
+});
+
+app.get('/timetable/morning/:path_id', (req, res) =>{ 
+
+    const table_id = req.params.path_id
+
+    Timetable.findOne({_id: table_id}, (err, foundItem)=>{
+        
+        res.render('timetable_morning_selected',{
+                timetable: foundItem
+            });
+
+
+    })
+    
+
+
+});
+
+//timetable Evening
+
+
+
+app.get('/timetable/evening', (req, res) =>{ 
+
+    Timetable_eve.find({}, (err, foundItem)=>{
+        
+        res.render('timetable_evening',{
+                timetable: foundItem
+            });
+
+
+    })
+    
+
+
+});
+
+app.get('/timetable/evening/:path_id', (req, res) =>{ 
+
+    const table_id = req.params.path_id
+
+    Timetable_eve.findOne({_id: table_id}, (err, foundItem)=>{
+        
+        res.render('timetable_evening_selected',{
+                timetable: foundItem
+            });
+
+
+    })
+    
+
+
+});
+
+
+
+
+//admin Side
+
+app.get('/login', (req, res)=>{
+    res.render('login');
+});
+
+app.use('/dashboard', dashRoute);
+
+
+
+
+
+
 
 app.get('/newsletter', (req, res)=>{
     res.render('formfilled',{
@@ -82,8 +236,4 @@ app.get('/contact-us/resp', (req, res)=>{
     res.render('formfilled',{
         formtp: "Informatin Received, Thankyou, We'll get in touch with you."
     });
-})
-
-app.post('/contact-us/resp', (req, res)=>{
-    res.redirect("/contact-us/resp");
 })

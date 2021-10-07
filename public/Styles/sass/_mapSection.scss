@@ -27,22 +27,38 @@ iframe{
   align-items: center;
 }
 .card{
-  padding: .5rem 0;
+  padding: 2rem 0;
     background-color: hsl(0, 17%, 95%) ;
     border: none;
     font-size: $font-primary;
     width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .card-text{
         text-align: justify;
         font-size: 1rem;
-        margin-top: -30px    
+        margin-top: -30px;
+        font-family: $font-secondary;    
+    }
+    .card-title{      
+      font-family: $font-primary;
     }
     .card-title, .card-text{
         padding: 1rem 2rem;
     }
-
-
-
+    
+    .take_tour{
+      font-family: $font-primary;
+      button{        
+      font-size: 1.2rem;
+      transition: .4s;
+      &:hover{
+        transition: .4s;
+        transform: scale(1.1);
+      }
+      }
+    }
 
 .image{
     display: flex;

@@ -1,0 +1,47 @@
+<%- include('partials/nav') %>
+
+<section class="timetable">
+<div class="container">
+<h1>Timetable Evening</h1>
+
+
+<h2>Select a Departent</h2>
+<div class="row">
+
+
+
+   
+  
+   
+    
+      
+ 
+
+  
+        <% timetable.forEach((timetable) => { %>
+
+        <div class="col-lg-4 col-md-5 style-card ">
+        <a href="/timetable/evening/<%= timetable._id %>" class="timetable_link">
+          <div class="card_table">
+            <h5 class="card-title"><%= timetable.dept %></h5>
+            <img src="/<%= timetable.file_doc%>" class="img-thumbnail" alt="timetable">
+            <div class="card-body">
+            </div>
+          </div>
+
+        </a>
+        </div>
+
+
+    
+    <%  }); %> 
+
+
+
+
+</div>
+
+
+</div>
+</section>
+<%- include('partials/footer') %> 
