@@ -12,30 +12,50 @@
 
 
 <!-- Default form register -->
-<form class="text-center border border-light p-5" action="#!">
+<form class="text-center border border-light p-5" method="POST">
+
+<%- include('partials/errormessage')  %> 
+
 
   <p class="h4 mb-4">Sign up</p>
 
   <div class="form-row mb-4">
       <div class="col">
-          <!-- First name -->
-          <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
-      </div>
-      <div class="col">
-          <!-- Last name -->
-          <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+          <!-- FUll Name -->
+          <input type="text" id="defaultRegisterFormLastName" name="name" class="form-control" placeholder="Full Name" 
+          value="<%= typeof name  != 'undefined' ? name : '' %>">
       </div>
   </div>
 
   <!-- E-mail -->
-  <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+  <input type="email" id="defaultRegisterFormEmail" name="email" class="form-control mb-4" placeholder="E-mail"
+  value="<%= typeof email  != 'undefined' ? email : '' %>" >
 
   <!-- Password -->
-  <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-      At least 8 characters and 1 digit
-  </small>
 
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="password" id="defaultRegisterFormPassword" name="password" class="form-control" placeholder="Password" 
+      aria-describedby="defaultRegisterFormPasswordHelpBlock"
+      value="<%= typeof password  != 'undefined' ? password : '' %>" >
+
+      <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          At least 8 characters
+      </small>    
+    </div>
+    <div class="col">
+      <input type="password" id="defaultRegisterFormPassword" name="password2" class="form-control"
+      placeholder="Repeat your Password" aria-describedby="defaultRegisterFormPasswordHelpBlock"
+      value="<%= typeof password2  != 'undefined' ? password2 : '' %>">
+
+      <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          At least 8 characters
+      </small>    
+    </div>
+</div>
+
+  
+ 
   <!-- Sign up button -->
   <button class="btn btn-info my-4 btn-block btn_signup_size" type="submit">Sign in</button>
 </form>

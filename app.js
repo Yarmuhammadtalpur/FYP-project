@@ -37,12 +37,17 @@ mongoose.connect(process.env.mongodb_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-    // .then((result)=>{
+     .then((result)=>{
         app.listen(port, (req, res) => {
         console.log("Your Server and Database is connected")
          })
-    // })
-    // .catch((err)=> console.log("Unable to Start: "+err))
+     })
+    .catch((err)=> console.log("Unable to Start: "+err))
+
+
+
+//passport Config
+
 
 
 
@@ -216,6 +221,7 @@ app.get('/timetable/evening/:path_id', (req, res) =>{
 
 app.get('/login', (req, res)=>{
     res.render('login');
+    
 });
 
 app.use('/dashboard', dashRoute);

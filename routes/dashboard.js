@@ -1,9 +1,9 @@
 const route = require('express').Router();
-const express = require('express');
 const mongoose = require('mongoose');
 const Userdb = require('../Model/user')
 const Timetable = require('../Model/timetable');
-const timetable_evening = require('../Model/timetable_evening')
+const timetable_evening = require('../Model/timetable_evening');
+const logRoute = require('../routes/login');
 
 const fs = require('fs')
 const multer = require('multer');
@@ -38,6 +38,18 @@ const upload = multer(
 
 
 });
+
+//login system
+
+
+
+
+route.use('/', logRoute)
+
+
+
+
+// dashBoard
 
 
 route.get('/', (req, res)=>{
@@ -250,19 +262,6 @@ route.post('/update-timetable/evening/update', upload.single('file_table'), (req
 
 
 });
-
-
-
-
-route.get('/new-user', (req, res)=>{
-    res.render('dash_signup');
-});
-
-
-route.get('/signout', (req, res)=>{
-    res.send("LogOut")
-});
-
 
 
 
