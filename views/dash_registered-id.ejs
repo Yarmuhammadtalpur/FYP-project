@@ -1,0 +1,99 @@
+<%- include('partials/dash_nav') %>
+
+<div class="home-content">
+  
+  <div class="row overview-boxes">
+    
+
+    <h2 class="table_title">List of Users</h2>
+
+
+    <div class=" table-responsive-md">
+      <table id="dtBasicExample2" class="table table-hover table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th class="th-sm">ID #
+      
+            </th>
+            <th class="th-sm">Full Name
+      
+            </th>
+            <th class="th-sm">Email
+      
+            </th>
+            <th class="th-sm">Registered Date
+
+            <th class="th-sm">Remove
+            </th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0; i<user.length; i++) { %>
+
+
+              
+           
+            <th> <%= i+1 %> </th>
+
+            <td><%= user[i].name %></td>
+
+            <td><%= user[i].email %></td>
+
+            <td><%= moment(user[i].date).format('Do MMMM, YYYY h:mm:s:A');  %></td>
+
+            <td class="align-middle">
+              <% if(user[i].email === 'admin@usindh.com'){  %>
+                	Head User can't Be Removed,
+              <%} else{ %>
+
+              <form method="POST" >
+              <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0" name="Id_no" value="<%= user[i]._id %>">
+              Remove
+              </button>
+            </form> 
+            <% } %>
+
+          </td>
+
+
+
+          
+          </tr>
+          <% }; %>
+
+
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <th class="th-sm">ID #
+      
+            </th>
+            <th class="th-sm">Full Name
+      
+            </th>
+            <th class="th-sm">Email
+      
+            </th>
+            <th class="th-sm">Registered Date
+              
+            <th class="th-sm">Remove
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    
+
+
+  </div>
+
+  </div>
+</section>
+
+
+
+
+
+<%- include('partials/dash_footer') %> 

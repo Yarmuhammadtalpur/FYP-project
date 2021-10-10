@@ -1,6 +1,12 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
+const { ensureAuthenticated } =require('./config/auth')
+
+
 const port = process.env.PORT;
 
 
@@ -31,6 +37,8 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 
+require('./config/passport')(passport);
+
 
 //database connection then Starting Server
 mongoose.connect(process.env.mongodb_URL, {
@@ -46,7 +54,23 @@ mongoose.connect(process.env.mongodb_URL, {
 
 
 
-//passport Config
+//Passport Config
+
+app.use(session({
+        secret: process.env.sessionSecret,
+        resave: false,
+        saveUninitialized: true
+      }))
+
+app.use(flash())
+
+app.use((req, res, next)=>{
+    res.locals.error = req.flash('error')
+    next();
+})
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 
@@ -224,7 +248,18 @@ app.get('/login', (req, res)=>{
     
 });
 
-app.use('/dashboard', dashRoute);
+app.post('/login', (req, res, next)=>{
+
+    passport.authenticate('local', {
+        successRedirect: "/dashboard",
+        failureRedirect: "/login",
+        failureFlash: true
+        
+    })(req, res, next);
+});
+
+
+app.use('/dashboard',ensureAuthenticated, dashRoute);
 
 
 

@@ -4,6 +4,8 @@ const Userdb = require('../Model/user')
 const Timetable = require('../Model/timetable');
 const timetable_evening = require('../Model/timetable_evening');
 const logRoute = require('../routes/login');
+const idUser = require('../Model/idusers')
+var moment = require('moment');
 
 const fs = require('fs')
 const multer = require('multer');
@@ -53,7 +55,9 @@ route.use('/', logRoute)
 
 
 route.get('/', (req, res)=>{
-    res.render('dashboard');
+    res.render('dashboard',{
+        name: req.user.name
+    });
 });
 
 route.get('/User-contacts', (req, res)=>{
@@ -262,6 +266,35 @@ route.post('/update-timetable/evening/update', upload.single('file_table'), (req
 
 
 });
+
+
+route.get('/registered-ids', (req, res)=>{
+
+
+    idUser.find({}, (err, foundItem)=>{
+        res.render("dash_registered-id.ejs", {
+            user: foundItem,
+            moment
+    
+        })
+    })
+});
+
+
+route.post('/registered-ids', async(req, res)=>{
+
+    
+    let user_id = req.body.Id_no;
+    try{
+    await idUser.deleteOne({_id: user_id});
+    }
+    catch(e){
+        console.log(e)
+    }
+    res.redirect('/dashboard/registered-ids');
+    
+})
+
 
 
 
