@@ -9,7 +9,9 @@ const idUser = require('../Model/idusers')
 routeLog.get('/new-user', (req, res)=>{
 
 
-    res.render('dash_signup');
+    res.render('dash_signup',{
+        useridname: req.user.name
+    });
 
     
 });

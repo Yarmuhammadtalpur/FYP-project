@@ -53,10 +53,10 @@ route.use('/', logRoute)
 
 // dashBoard
 
-
 route.get('/', (req, res)=>{
+  
     res.render('dashboard',{
-        name: req.user.name
+        useridname: req.user.name
     });
 });
 
@@ -65,7 +65,8 @@ route.get('/User-contacts', (req, res)=>{
 
     Userdb.find({}, (err, foundItem)=>{
         res.render("dash_user-list", {
-            user: foundItem
+            user: foundItem,
+            useridname: req.user.name
     
         })
     })
@@ -94,7 +95,8 @@ route.get('/User-contacts/message/:path', (req, res)=>{
         
         res.render("dash_user_message", {
             name: foundItem.first_Name,
-            message: foundItem.message
+            message: foundItem.message,
+            useridname: req.user.name
         })
     })
 
@@ -103,7 +105,9 @@ route.get('/User-contacts/message/:path', (req, res)=>{
 
 route.get('/update-timetable', (req, res)=>{
     
-        res.render("dash_timetable.ejs")
+        res.render("dash_timetable.ejs",{
+            useridname: req.user.name
+        })
 });
 
 
@@ -117,7 +121,8 @@ route.get('/update-timetable/morning', (req, res)=>{
 
     Timetable.find({}, (err, foundItem)=>{
         res.render("dash-timetable-morning", {
-            timetable: foundItem
+            timetable: foundItem,
+            useridname: req.user.name
     
         })
     })
@@ -161,7 +166,9 @@ route.post('/update-timetable/morning', async(req, res)=>{
 route.get('/update-timetable/morning/update', (req, res)=>{
 
 
-    res.render('dash_update_timetable_morning');
+    res.render('dash_update_timetable_morning',{
+        useridname: req.user.name
+    });
 
     
 });
@@ -203,7 +210,8 @@ route.get('/update-timetable/evening', (req, res)=>{
 
     timetable_evening.find({}, (err, foundItem)=>{
         res.render("dash-timetable-evening", {
-            timetable: foundItem
+            timetable: foundItem,
+            useridname: req.user.name
     
         })
     })
@@ -233,7 +241,9 @@ route.post('/update-timetable/evening', async(req, res)=>{
 route.get('/update-timetable/evening/update', (req, res)=>{
 
 
-    res.render('dash_update_timetable_evening');
+    res.render('dash_update_timetable_evening',{
+        useridname: req.user.name
+    });
 
     
 });
@@ -274,7 +284,8 @@ route.get('/registered-ids', (req, res)=>{
     idUser.find({}, (err, foundItem)=>{
         res.render("dash_registered-id.ejs", {
             user: foundItem,
-            moment
+            moment,
+            useridname: req.user.name
     
         })
     })
