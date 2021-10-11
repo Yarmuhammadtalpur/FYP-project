@@ -244,7 +244,12 @@ app.get('/timetable/evening/:path_id', (req, res) =>{
 //admin Side
 
 app.get('/login', (req, res)=>{
-    res.render('login');
+    if(req.isAuthenticated()){
+        res.redirect('/dashboard')
+    }else{
+        res.render('login');
+    }
+    
     
 });
 
