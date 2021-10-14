@@ -43,7 +43,7 @@ routeLog.post('/new-user', (req, res)=>{
         res.render('dash_signup',{
             errorMessage,
             name,
-            email: email.toLowerCase(),
+            email,
             password,
             password2
         })
@@ -70,7 +70,7 @@ routeLog.post('/new-user', (req, res)=>{
                     bcrypt.hash(password, 11, function(err, hash) {
                         const newUser = new idUser({
                             name,
-                            email,    
+                            email : email.toLowerCase(),    
                             password: hash,
                         })
 
