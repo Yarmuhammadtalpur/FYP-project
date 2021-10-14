@@ -77,9 +77,7 @@ routeLog.post('/new-user', (req, res)=>{
                         newUser.save();
                     });
                     
-                    res.render('dashboard-user-added',{
-                        formtp: "User Successfully Added"
-                    })
+                    res.redirect('/dashboard/registered-ids');
                     
 
 
