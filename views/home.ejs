@@ -1,67 +1,12 @@
 <%- include('partials/preloader') %> 
 <%- include('partials/nav') %>
+
+
+
 <!-- main Section -->
 
-<section class="main-landing">
-    
-  <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active main-box-size overlay" data-bs-interval="5000">
-        <img src="/public/Images/image_fet.jpg" class="d-block img-size " alt="...">
-                <div class="carousel-caption  d-md-block">
-          <h5>WELCOME TO THE STUDENT GUIDANCE CENTRE</h5>
-          <p >University of Sindh, Jamshoro </p>
-          
-        </div>
-      </div>
-      <div class="carousel-item main-box-size overlay " data-bs-interval="5000">
-        <img src="/public/Images/1607957692_552.jpg" class="d-block img-size" alt="..." style="animation-delay: none">
-        <div class="carousel-caption d-md-block">
-          <h5 class="animate__animated animate__pulse">INFORMATION AND SUPPORT FOR STUDENTS</h5>
-          <p class="animate__animated animate__fadeInUp">“An investment in knowledge pays the best interest” – Benjamin Franklin</p>
-        </div>
-      </div>
-      <div class="carousel-item main-box-size overlay" data-bs-interval="5000">
-        <img src="/public/Images/1608593979_186.jpg" class="d-block img-size" alt="...">
-        <div class="carousel-caption d-md-block">
-          <h5 class="animate__animated animate__slideInDown">Building of FET</h5>
-          <p class="animate__animated animate__fadeInDown">FET, University of Sindh</p>
-        </div>
-      </div>
-      <div class="carousel-item main-box-size overlay " data-bs-interval="5000">
-        <img src="/public/Images/1608593907_290.jpg" class="d-block img-size" alt="...">
-        <div class="carousel-caption d-md-block">
-          <h5 class="animate__animated animate__zoomIn">IT Lawn of FET</h5>
-          <p class="animate__animated animate__slideInUp">FET, University of Sindh</p>
-        </div>
-      </div>
-      <div class="carousel-item main-box-size overlay" data-bs-interval="5000">
-        <img src="/public/Images/image_lab.jpg" class="d-block img-size" alt="...">
-        <div class="carousel-caption d-md-block ">
-          <h5 class="animate__animated animate__slideInDown">A Place to Learn and Lead</h5>
-          <p class="animate__animated animate__slideInDown">Dynamic learning with quality education through rigorous teaching and research methodologies in Engineering and Technology disciplines</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  
-</section>
 
+<%- include('pages/landing') %>
 
 <!-- Dean Section -->
 <section>
@@ -87,6 +32,155 @@
 
 </div>
 </section>
+
+
+
+<!-- Information Section -->
+<section class="information_section">
+
+  <div class="container-fluid">
+
+
+<div class="row ">
+
+      <div class="Services">
+          <h1> Find Services</h1>
+
+
+          <div class="Search_box">
+            <form method="post">
+
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Looking for Something"
+                aria-label="Recipient's username" aria-describedby="button-addon2" required>
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit" id="button-addon2">Find</button>
+                </div>
+              </div>
+
+
+          </form>
+
+
+          </div>
+      </div>
+
+
+
+      <div class="col col-lg-3 col-md-4 info_cards">
+        <div class="card" style="width: 20rem;">
+          <a href="/info/central-library" class="card_link_info"> 
+            <img src="/public/Images/info-cards/zero-point-near-central.jpg" class="img-thumbnail" alt="thumb">
+            <div class="card-body">
+               <h5 class="card-title">Central Library</h5> 
+              <p class="">Introduction It is a fact that no institution or department can work efficiently and 
+                optimally until and unless its superiors and managers directly take an active and avid interest in its 
+                proper administration. Obviously, the Allama I. I. Kazi Central Library is no exception to this rule. 
+                We are indeed fortunate to have in the person of the present Vice Chancellor of the University of Sindh,</p></a>
+          </div>
+          </div>
+      </div>
+
+
+      <div class="col col-lg-3 col-md-4 info_cards">        
+        <div class="card" style="width: 20rem;">
+        <a href="/info/sindhology" class="card_link_info"> 
+          <img src="/public/Images/info-cards/Sindhology_cover.jpg" class="img-thumbnail" alt="thumb">
+          <div class="card-body">
+             <h5 class="card-title">Sindhology</h5> 
+            <p class="">Cultural Heritage is an emerging interdisciplinary field of study, and its inquiry has increasingly been
+               recognized as an important arena by scholars, practitioners, and institutions. The scholarship recognizes that 
+               cultural heritage – in its many different forms and alternative expressions – constitutes an influential force in
+                the socio-cultural and political, economic and religious dynamics of state and society. In academic and policy 
+                narratives, </p></a>
+        </div>
+        </div>
+      </div>
+
+
+    <div class="col col-lg-3 col-md-4 info_cards">        
+      <div class="card" style="width: 20rem;">
+      <a href="/info/student-welfare" class="card_link_info"> 
+        <img src="/public/Images/info-cards/student-welfare.jpg" class="img-thumbnail" alt="thumb">
+        <div class="card-body">
+           <h5 class="card-title">Student Welfare</h5> 
+          <p class="">The University deems it obligatory to look after the welfare of the students admitted to its various programs. All efforts are made to facilitate students stay at the Campus and provide opportunities for wholesome development of students personalities. Directorate of Students Affairs has been established to provide necessary guidance and assistance.</p></a>
+      </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="col col-lg-3 col-md-4 info_cards">        
+      <div class="card" style="width: 20rem;">
+      <a href="/info/scholarships" class="card_link_info"> 
+        <img src="/public/Images/info-cards/scolarship-cover.jpg" class="img-thumbnail" alt="thumb">
+        <div class="card-body">
+           <h5 class="card-title">Scholarships</h5> 
+          <p class="">The University admits a large number of students, majority belonging to rural areas and disadvantaged 
+            poor families, realizing that education has become very costly and it is difficult for them to pursue their 
+            education due to financial constraints. The University has taken initiative for providing financial relief to 
+            meritorious and deprived students with the financial assistances/need based scholarship programs.</p></a>
+      </div>
+      </div>
+    </div>
+
+  
+    <div class="col col-lg-3 col-md-4 info_cards">        
+      <div class="card" style="width: 20rem;">
+      <a href="https://lms.usindh.edu.pk/" class="card_link_info"> 
+        <img src="/public/Images/info-cards/lms_cover.jpg" class="img-thumbnail" alt="thumb">
+        <div class="card-body">
+           <h5 class="card-title">Learning Management System</h5> 
+          <p class="">Information Technology Services Centre (ITSC) was established in 2018 with the vision that there
+             should be a centralized IT center, which will provide best IT facilities to all the stake holders of the 
+             University of Sindh in an efficient and centralized manner. Since its inception, ITSC has achieved remarkable
+              milestones provided numerous Online services to the Faculty and Students of University of Sindh, striving to 
+              provide best possible online solution to facilitate the academic and administrative process, involving</p></a>
+      </div>
+      </div>
+    </div>
+
+
+
+    <div class="col col-lg-3 col-md-4 info_cards">        
+      <div class="card" style="width: 20rem;">
+      <a href="https://usindh.edu.pk/career-opportunities/" class="card_link_info"> 
+        <img src="/public/Images/info-cards/career-1.jpg" class="img-thumbnail" alt="thumb">
+        <div class="card-body">
+           <h5 class="card-title">Career Opportunities</h5> 
+          <p class="">The applicants should possess First Class or  CGPA in BS (4 years)/Master degree in the relevant field, having Sixteen (16) years of education from any HEC recognized University and having no 3rd division / D grade in academic career.
+
+            Priority will be given to candidates having MPhil/MS degree in the relevant field or at least registered in any HEC recognized University as MPhil / PhD Research scholar.</p></a>
+      </div>
+      </div>
+    </div>
+
+
+
+    <div class="col col-lg-3 col-md-4 info_cards">        
+      <div class="card" style="width: 20rem;">
+      <a href="/info/US-SCDC" class="card_link_info"> 
+        <img src="/public/Images/info-cards/US-SCDC.png" class="img-thumbnail" alt="thumb">
+        <div class="card-body">
+           <h5 class="card-title"> Skills and Career Development Center</h5> 
+          <p class="">Academia and industry have been collaborating for over a century worldwide, but the rise of global 
+            knowledge economy has intensified the need for strong relationship and bridging up the gap between academia and 
+            industry. Unfortunately, in Pakistan generally and in Sindh specifically, most of our universities are lagging behind 
+            on this collaboration and are failed to keep pace with industry due to their old fashioned and traditional curriculum 
+            and teaching methods. As there is competition in industry, </p></a>
+      </div>
+      </div>
+    </div>
+
+</div>
+</div> 
+
+</section>
+
+
+
 
 <!-- Map Section -->
 <section id="map_section">

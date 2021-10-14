@@ -278,6 +278,8 @@ route.post('/update-timetable/evening/update', upload.single('file_table'), (req
 });
 
 
+//Adding New User
+
 route.get('/registered-ids', (req, res)=>{
 
 
@@ -305,6 +307,9 @@ route.post('/registered-ids', async(req, res)=>{
     res.redirect('/dashboard/registered-ids');
     
 })
+
+
+
 
 
 

@@ -1,0 +1,63 @@
+.information_section{
+    padding: 2rem 1rem;
+    min-height: 50vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .row{
+       font-family: $font-primary;
+       .Services{
+        display: flex;
+        justify-content: space-between;
+
+        
+    }
+
+    .card{
+        background-color: transparent;
+    }
+    .card-body{
+        padding: 0;
+    }
+    
+    .card_link_info{
+        text-decoration: none;
+        color: black;
+        
+            img{
+                transition: .3s;
+            }
+            h5{
+                transition: .1s;
+            }
+           
+        &:hover {
+
+            
+            h5{
+                text-decoration: underline;
+                transition: .1s;
+                color: $blue-600;
+            }
+
+            img{
+                transform: scale(1.1);
+                transition: .3s;
+            }
+        }
+    }
+
+        .info_cards{
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .card{
+        margin: 0;
+        padding: 0;
+    }
+
+}

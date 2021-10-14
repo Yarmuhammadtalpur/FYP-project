@@ -1,0 +1,66 @@
+.info_cards_section{
+
+
+
+    img{
+        width: 100%;
+    }
+    .container{
+        padding: 2rem 1rem; 
+        
+
+        .margin_all{
+
+            margin: 2rem auto;
+        }
+
+        a{
+            text-decoration: none;
+            color: $blue-400;
+
+            &:hover{
+                color: $blue-800;
+            }
+        }
+        .email_link{
+            color: $blue-800;
+            cursor: pointer;
+        }
+
+        h4{
+            font-family: $font-primary;
+            font-weight: 500;
+        }
+
+        h5, h6{
+            font-family: $font-primary;
+        }
+
+        p{
+            text-align: justify;
+            font-family: $font-secondary;
+        }
+
+    
+
+        .page_list_style{
+            list-style: none;
+            font-weight: 600;
+        }
+
+
+        .pdf_download{
+            height: 100px;
+            width: 300px;
+        }
+
+
+    }
+
+
+
+
+
+
+
+}

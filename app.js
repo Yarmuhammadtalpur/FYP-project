@@ -6,18 +6,14 @@ const session = require('express-session');
 const passport = require('passport');
 const { ensureAuthenticated } =require('./config/auth')
 
-
 const port = process.env.PORT;
-
-
-
 // getting admin route
 const dashRoute = require('./routes/dashboard')
-
+// getting info cards route
+const infocards = require('./routes/info-cards')
 //geeting timetable Schema
 const Timetable = require('./Model/timetable')
 const Timetable_eve = require('./Model/timetable_evening')
-
 // getting user schema
 const Userdb = require('./Model/user')
 
@@ -40,17 +36,7 @@ app.use(express.json());
 require('./config/passport')(passport);
 
 
-//database connection then Starting Server
-mongoose.connect(process.env.mongodb_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-     .then((result)=>{
-        app.listen(port, (req, res) => {
-        console.log("Your Server and Database is connected")
-         })
-     })
-    .catch((err)=> console.log("Unable to Start: "+err))
+
 
 
 
@@ -75,10 +61,30 @@ app.use(passport.session());
 
 
 
+//database connection then Starting Server
+mongoose.connect(process.env.mongodb_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+    .catch((err)=> console.log("Unable to Start: "+err))
+
+
+//Starting Server On Port
+app.listen(port, (req, res) => {
+        console.log("Your Server and Database is connected")
+
+         })
+
+
+
+
 
 app.get('/', (req, res) => {
     res.render('home');
 });
+
+
+app.use('/info', infocards );
 
 app.get('/home/dean_message', (req, res)=>{
 
@@ -151,6 +157,16 @@ app.get('/section/faqs', (req, res)=>{
 app.get('/about', (req, res) =>{ 
     res.render('about');
 });
+
+
+app.get('/info/:path', (req, res) =>{ 
+    const infoPath = req.params.path;
+
+    res.render('info-details');
+});
+
+
+
 
 //timetable Morning
 
@@ -282,4 +298,10 @@ app.get('/contact-us/resp', (req, res)=>{
     res.render('formfilled',{
         formtp: "Informatin Received, Thankyou, We'll get in touch with you."
     });
+})
+
+
+app.get('*', (req, res)=>{
+    
+    res.render("404");
 })

@@ -2064,6 +2064,138 @@ nav .profile-details .admin_name {
   margin: 2rem 0;
 }
 
+.information_section {
+  padding: 2rem 1rem;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.information_section .row {
+  font-family: "Roboto", sans-serif;
+}
+
+.information_section .row .Services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.information_section .row .card {
+  background-color: transparent;
+}
+
+.information_section .row .card-body {
+  padding: 0;
+}
+
+.information_section .row .card_link_info {
+  text-decoration: none;
+  color: black;
+}
+
+.information_section .row .card_link_info img {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.information_section .row .card_link_info h5 {
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.information_section .row .card_link_info:hover h5 {
+  text-decoration: underline;
+  -webkit-transition: .1s;
+  transition: .1s;
+  color: #1E88E5;
+}
+
+.information_section .row .card_link_info:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.information_section .row .info_cards {
+  margin: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.information_section .card {
+  margin: 0;
+  padding: 0;
+}
+
+.info_cards_section img {
+  width: 100%;
+}
+
+.info_cards_section .container {
+  padding: 2rem 1rem;
+}
+
+.info_cards_section .container .margin_all {
+  margin: 2rem auto;
+}
+
+.info_cards_section .container a {
+  text-decoration: none;
+  color: #42A5F5;
+}
+
+.info_cards_section .container a:hover {
+  color: #1565C0;
+}
+
+.info_cards_section .container .email_link {
+  color: #1565C0;
+  cursor: pointer;
+}
+
+.info_cards_section .container h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.info_cards_section .container h5, .info_cards_section .container h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+.info_cards_section .container p {
+  text-align: justify;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.info_cards_section .container .page_list_style {
+  list-style: none;
+  font-weight: 600;
+}
+
+.info_cards_section .container .pdf_download {
+  height: 100px;
+  width: 300px;
+}
+
 .newsletter_header {
   height: 50vh;
   display: -webkit-box;
@@ -2085,6 +2217,84 @@ nav .profile-details .admin_name {
   font-weight: 600;
   letter-spacing: 2px;
   line-height: 1.5;
+}
+
+.page_404 .page_align {
+  text-align: center;
+  padding: 1;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Merriweather', serif;
+  overflow: hidden;
+  color: #424040;
+}
+
+.page_404 .page_align h1 {
+  margin-bottom: -10rem;
+  font-size: 7rem;
+  z-index: 2;
+}
+
+.page_404 .page_align img {
+  height: 60vh;
+  width: 40vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .page_404 .page_align img {
+    height: 80vh;
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page_404 .page_align img {
+    height: 70vh;
+    width: 90vw;
+  }
+}
+
+.page_404 .page_align h2 {
+  font-size: 3rem;
+}
+
+.page_404 .page_align p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.page_404 .page_align button {
+  outline: none;
+  border: none;
+  margin: 2rem 0;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: #1976D2;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.page_404 .page_align button:hover {
+  background-color: #0D47A1;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .footer-top {
