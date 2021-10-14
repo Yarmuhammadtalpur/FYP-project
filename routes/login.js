@@ -43,7 +43,7 @@ routeLog.post('/new-user', (req, res)=>{
         res.render('dash_signup',{
             errorMessage,
             name,
-            email,
+            email: email.toLowerCase(),
             password,
             password2
         })
