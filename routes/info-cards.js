@@ -2,15 +2,14 @@ const routeInfo = require('express').Router();
 
 
 
-routeInfo.get('/central-library', (req, res)=>{
+routeInfo.get('/lms', (req, res)=>{
   
-    res.render('pages/central-library');
+    res.render('pages/LMS');
 });
 
-
-routeInfo.get('/sindhology', (req, res)=>{
+routeInfo.get('/ehsass', (req, res)=>{
   
-    res.render('pages/Sindhology');
+    res.render('pages/ehsass');
 });
 
 routeInfo.get('/student-welfare', (req, res)=>{
@@ -18,6 +17,10 @@ routeInfo.get('/student-welfare', (req, res)=>{
     res.render('pages/Student-Welfare');
 });
 
+routeInfo.get('/scholarships', (req, res)=>{
+  
+    res.render('pages/Scholarships');
+});
 
 routeInfo.get('/US-SCDC', (req, res)=>{
   

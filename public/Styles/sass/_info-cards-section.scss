@@ -7,7 +7,7 @@
     }
     .container{
         padding: 2rem 1rem; 
-        
+        overflow-x: hidden;
 
         .margin_all{
 
@@ -54,7 +54,36 @@
             width: 300px;
         }
 
+        .half_img{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .half_img2{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .lms_img1, 
+        .lms_img2{
+            height: auto;
+            width: 48%;
+        }
 
+        .link_btn{
+            color: white;
+            
+            &:hover{
+                color: rgb(233, 233, 233);
+            }
+        }
+
+
+    }
+
+    .next_section{
+        color: green;
+        font-weight: bold;
     }
 
 
