@@ -12,6 +12,11 @@ routeInfo.get('/ehsass', (req, res)=>{
     res.render('pages/ehsass');
 });
 
+routeInfo.get('/ehsass/registerId', (req, res)=>{
+  
+    res.render('pages/ehsass_registerId');
+});
+
 routeInfo.get('/student-welfare', (req, res)=>{
   
     res.render('pages/Student-Welfare');
