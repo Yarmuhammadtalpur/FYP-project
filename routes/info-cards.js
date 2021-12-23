@@ -18,7 +18,13 @@ routeInfo.get('/ehsass/registerId', (req, res)=>{
   
     res.render('pages/ehsass_registerId');
 });
+
 //HEC
+
+routeInfo.get('/HEC_scholarships', (req, res)=>{
+  
+    res.render('pages/HEC_scholarships');
+});
 
 
 
