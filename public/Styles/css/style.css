@@ -2183,6 +2183,7 @@ nav .profile-details .admin_name {
 }
 
 .info_cards_section .container p {
+  font-size: 1.115rem;
   text-align: justify;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -2236,6 +2237,16 @@ nav .profile-details .admin_name {
 
 .info_cards_section .next_section {
   color: green;
+  font-weight: bold;
+}
+
+.info_cards_section .teacher_section {
+  color: blue;
+  font-weight: bold;
+}
+
+.info_cards_section .warning_section {
+  color: #a1a100;
   font-weight: bold;
 }
 

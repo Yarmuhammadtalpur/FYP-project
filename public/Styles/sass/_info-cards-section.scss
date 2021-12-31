@@ -37,6 +37,7 @@
         }
 
         p{
+            font-size: 1.115rem ;
             text-align: justify;
             font-family: $font-secondary;
         }
@@ -85,9 +86,14 @@
         color: green;
         font-weight: bold;
     }
-
-
-
+    .teacher_section{
+        color: blue;
+        font-weight: bold;
+    }
+    .warning_section{
+        color: rgb(161, 161, 0);
+        font-weight: bold;
+    }
 
 
 

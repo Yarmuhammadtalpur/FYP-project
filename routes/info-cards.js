@@ -8,6 +8,10 @@ routeInfo.get('/lms', (req, res)=>{
     res.render('pages/LMS');
 });
 
+routeInfo.get('/lms/login', (req, res)=>{
+    res.render('pages/LMS_LogIn')
+})
+
 //scholarships
 routeInfo.get('/ehsass', (req, res)=>{
   
