@@ -60,7 +60,7 @@ route.get('/', (req, res)=>{
     });
 });
 
-route.get('/User-contacts', (req, res)=>{
+route.get('/User-Queries', (req, res)=>{
 
 
     Userdb.find({}, (err, foundItem)=>{
@@ -72,7 +72,7 @@ route.get('/User-contacts', (req, res)=>{
     })
 });
 
-route.post('/User-contacts', async(req, res)=>{
+route.post('/User-Queries', async(req, res)=>{
 
     
     let user_id = req.body.Id_no;
@@ -82,12 +82,12 @@ route.post('/User-contacts', async(req, res)=>{
     catch(e){
         console.log(e)
     }
-    res.redirect('/dashboard/User-contacts');
+    res.redirect('/dashboard/User-Queries');
     
 })
 
 
-route.get('/User-contacts/message/:path', (req, res)=>{
+route.get('/User-Queries/message/:path', (req, res)=>{
 
     let routerparam = req.params.path
 
