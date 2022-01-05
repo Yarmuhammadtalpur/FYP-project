@@ -12,6 +12,10 @@ routeInfo.get('/lms/login', (req, res)=>{
     res.render('pages/LMS_LogIn')
 })
 
+routeInfo.get('/lms/exam_result', (req, res)=>{
+    res.render('pages/exam_result_check')
+})
+
 //scholarships
 routeInfo.get('/ehsass', (req, res)=>{
   
